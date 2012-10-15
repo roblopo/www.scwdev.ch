@@ -1,0 +1,13 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+       "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Beschreibung der Seite</title>
+</head>
+<body>
+<h>Was wötsch?</h>
+<p>
+<a href="http://www.scwipkingen.ch/04_mysql/update_table_1.php/">Match-Datenbank updaten</a><br>
+
+</body>
+</html>

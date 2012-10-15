@@ -1,0 +1,4 @@
+AuthName "Geschützte Administrations-Seite"
+AuthType Basic
+AuthUserFile "/mnt/sites/scwipkingen.ch/web/06_downloads/.htpasswd"
+Require valid-user

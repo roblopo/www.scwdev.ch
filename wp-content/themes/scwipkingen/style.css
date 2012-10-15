@@ -1,0 +1,3808 @@
+/*
+
+Theme Name: SC Wipkingen
+
+Theme URI: http://www.scwipkingen.ch/
+
+Description: Das Theme der SC Wipkingen Homepage.
+
+Author: Wirz Loop
+
+Version: 1.0
+
+Tags: sc wipkingen
+
+*/
+
+
+
+
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+
+-------------------------------------------------------------- */
+
+
+
+html, body, div, span, applet, object, iframe,
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+
+a, abbr, acronym, address, big, cite, code,
+
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+
+small, strike, strong, sub, sup, tt, var,
+
+b, u, i, center,
+
+dl, dt, dd, ol, ul, li,
+
+fieldset, form, label, legend,
+
+table, caption, tbody, tfoot, thead, tr, th, td {
+
+	background: transparent;
+
+	border: 0;
+
+	margin: 0;
+
+	padding: 0;
+
+	vertical-align: baseline;
+
+	}
+
+body {
+
+	line-height: 1;
+
+
+
+
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+	clear: both;
+
+	font-weight: normal;
+
+
+
+}
+
+ol, ul {
+
+	list-style: none;
+
+}
+
+blockquote {
+
+	quotes: none;
+
+}
+
+blockquote:before, blockquote:after {
+
+	content: '';
+
+	content: none;
+
+}
+
+del {
+
+	text-decoration: line-through;
+
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+
+table {
+
+	border-collapse: collapse;
+
+	border-spacing: 0;
+
+}
+
+a img {
+
+	border: none;
+
+}
+
+
+
+/* =Layout
+
+-------------------------------------------------------------- */
+
+
+
+/*
+
+LAYOUT: Two columns
+
+DESCRIPTION: Two-column fixed layout with one sidebar right of content
+
+*/
+
+
+
+#container {
+
+	float: left;
+
+	margin: 0 -240px 0 2px;
+
+	width: 100%;
+
+}
+
+#content {
+
+	margin: 0 240px 0 0px; /*Abstand rund um den Post*/
+
+}
+
+#primary,
+
+#secondary {
+
+	float: right;
+
+	overflow: hidden;
+
+	width: 220px;
+
+	padding-right:4px;
+
+}
+
+#secondary {
+
+	clear: right;
+
+}
+
+#footer {
+
+	clear: both;
+
+	width: 100%;
+
+}
+
+
+
+/*
+
+LAYOUT: One column, no sidebar
+
+DESCRIPTION: One centered column with no sidebar
+
+*/
+
+
+
+.one-column #content {
+
+	margin: 0 auto;
+
+	width: 640px;
+
+}
+
+
+
+/*
+
+LAYOUT: Full width, no sidebar
+
+DESCRIPTION: Full width content with no sidebar; used for attachment pages
+
+*/
+
+
+
+.single-attachment #content {
+
+	margin: 0 auto;
+
+	width: 900px;
+
+}
+
+
+
+
+
+/* =Fonts
+
+-------------------------------------------------------------- */
+
+body,
+
+input,
+
+textarea,
+
+.page-title span,
+
+.pingback a.url {
+
+	font-family: Georgia, "Bitstream Charter", serif;
+
+}
+
+h3#comments-title,
+
+h3#reply-title,
+
+#access .menu,
+
+#access div.menu ul,
+
+#cancel-comment-reply-link,
+
+.form-allowed-tags,
+
+#site-info,
+
+#site-title,
+
+#wp-calendar,
+
+.comment-meta,
+
+.comment-body tr th,
+
+.comment-body thead th,
+
+.entry-content label,
+
+.entry-content tr th,
+
+.entry-content thead th,
+
+.entry-meta,
+
+.entry-title,
+
+.entry-utility,
+
+#respond label,
+
+.navigation,
+
+.page-title,
+
+.pingback p,
+
+.reply,
+
+.widget-title,
+
+.wp-caption-text,
+
+input[type=submit] {
+
+	/*font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;*/
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+// damit iphone schrift nicht vergrössert
+
+-webkit-text-size-adjust: none;
+
+
+
+}
+
+pre {
+
+	font-family: "Courier 10 Pitch", Courier, monospace;
+
+}
+
+code {
+
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+
+}
+
+
+
+
+
+/* =Structure
+
+-------------------------------------------------------------- */
+
+
+
+/* The main theme structure */
+
+#access .menu-header,
+
+div.menu,
+
+#colophon,
+
+#branding,
+
+#main,
+
+#wrapper {
+
+	margin: 0 auto;
+
+	width: 940px;
+
+}
+
+#wrapper {
+
+	background:transparent;
+
+	margin-top: -20px;
+
+	padding: 0 20px;
+
+}
+
+
+
+/* Structure the footer area */
+
+#footer-widget-area {
+
+	overflow: hidden;
+
+}
+
+#footer-widget-area .widget-area {
+
+	float: left;
+
+	margin-right: 20px;
+
+	width: 220px;
+
+}
+
+#footer-widget-area #fourth {
+
+	margin-right: 0;
+
+}
+
+#site-info {
+
+	float: left;
+
+	font-size: 14px;
+
+	font-weight: bold;
+
+	width: 700px;
+
+}
+
+#site-generator {
+
+	float: right;
+
+	width: 220px;
+
+}
+
+
+
+
+
+/* =Global Elements
+
+-------------------------------------------------------------- */
+
+
+
+/* Main global 'theme' and typographic styles */
+
+body {
+
+	background-image:url(http://www.scwipkingen.ch/wp-content/themes/scwipkingen/images/background.jpg) !important;
+
+	background-repeat:no-repeat;
+
+	background-attachment:fixed;
+
+	background-position:left top;
+
+	/*background-color:black;*/
+
+}
+
+
+
+body,
+
+input,
+
+textarea {
+
+	color: #666;
+
+	font-size: 11px;
+
+	line-height: 18px;
+
+}
+
+hr {
+
+	background-color: #e7e7e7;
+
+	border: 0px;
+
+	clear: both;
+
+	height: 1px;
+
+	margin-bottom: 18px;
+
+}
+
+
+
+/* Text elements */
+
+p {
+
+	margin-bottom: 18px;
+
+}
+
+ul {
+
+	list-style: square;
+
+	margin: 0 0 18px 1.5em;
+
+}
+
+ol {
+
+	list-style: decimal;
+
+	margin: 0 0 18px 1.5em;
+
+
+
+}
+
+ol ol {
+
+	list-style: upper-alpha;
+
+}
+
+ol ol ol {
+
+	list-style: lower-roman;
+
+}
+
+ol ol ol ol {
+
+	list-style: lower-alpha;
+
+}
+
+ul ul,
+
+ol ol,
+
+ul ol,
+
+ol ul {
+
+	margin-bottom: 0;
+
+}
+
+dl {
+
+	margin: 0 0 24px 0;
+
+}
+
+dt {
+
+	font-weight: bold;
+
+}
+
+dd {
+
+	margin-bottom: 18px;
+
+}
+
+strong {
+
+	font-weight: bold;
+
+}
+
+cite,
+
+em,
+
+i {
+
+	font-style: italic;
+
+}
+
+big {
+
+	font-size: 131.25%;
+
+}
+
+ins {
+
+	background: #ffc;
+
+	text-decoration: none;
+
+}
+
+blockquote {
+
+	font-style: italic;
+
+	padding: 0 3em;
+
+}
+
+blockquote cite,
+
+blockquote em,
+
+blockquote i {
+
+	font-style: normal;
+
+}
+
+pre {
+
+	background: #f7f7f7;
+
+	color: #222;
+
+	line-height: 18px;
+
+	margin-bottom: 18px;
+
+	padding: 1.5em;
+
+}
+
+abbr,
+
+acronym {
+
+	border-bottom: 1px dotted #666;
+
+	cursor: help;
+
+}
+
+sup,
+
+sub {
+
+	height: 0;
+
+	line-height: 1;
+
+	position: relative;
+
+	vertical-align: baseline;
+
+}
+
+sup {
+
+	bottom: 1ex;
+
+}
+
+sub {
+
+	top: .5ex;
+
+}
+
+input[type="text"],
+
+textarea {
+
+	background: #f9f9f9;
+
+	border: 1px hiden #ccc;
+
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+
+	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+
+	padding: 2px;
+
+}
+
+a:link.more-link {
+
+	color:gray;
+
+	text-decoration:none;
+
+}
+
+a:visited.more-link {
+
+	color:gray;
+
+	text-decoration:none;
+
+}
+
+a:hover.more-link {
+
+	color:white;
+
+	text-decoration:none;
+
+}
+
+a:link {
+
+	color: white;
+
+	text-decoration:none;
+
+}
+
+a:visited {
+
+	color: white;
+
+	text-decoration:none;
+
+
+
+}
+
+a:active,
+
+a:hover {
+
+	color: gray;
+
+	text-decoration:none;
+
+}
+
+
+
+/* Text meant only for screen readers */
+
+.screen-reader-text {
+
+	position: absolute;
+
+	left: -9000px;
+
+}
+
+
+
+
+
+/* =Header
+
+-------------------------------------------------------------- */
+
+
+
+#header {
+
+	padding: 25px 0 0 0;
+
+}
+
+#site-title {
+
+	display:none;
+
+	float: left;
+
+	font-size: 30px;
+
+	line-height: 36px;
+
+	margin: 0 0 18px 0;
+
+	width: 700px;
+
+}
+
+#site-title a {
+
+	color: #000;
+
+	font-weight: bold;
+
+	text-decoration: none;
+
+}
+
+#site-description {
+
+	display:none;
+
+	clear: right;
+
+	float: right;
+
+	font-style: italic;
+
+	margin: 14px 0 18px 0;
+
+	width: 220px;
+
+}
+
+
+
+/* This is the custom header image */
+
+#branding img {
+
+	border-top: 0px solid #000;
+
+	border-bottom: 0px solid #000;
+
+	clear: both;
+
+	display: block;
+
+}
+
+
+
+
+
+/* =Menu
+
+-------------------------------------------------------------- */
+
+
+
+#access {
+
+	background:none;
+
+	display: block;
+
+	float: left;
+
+	/*margin: 0 auto;*/
+
+	margin-top: -36px;
+
+	margin-left: 1px;
+
+	width: 540px;
+
+}
+
+#access .menu-header,
+
+div.menu {
+
+	font-size: 13px;
+
+	font-weight:bold;
+
+	margin-left: 0px;
+
+	width: 928px;
+
+}
+
+#access .menu-header ul,
+
+div.menu ul {
+
+	list-style: none;
+
+	margin: 0;
+
+	
+
+}
+
+#access .menu-header li,
+
+div.menu li {
+
+	float: left;
+
+	position: relative;
+
+}
+
+#access a {
+
+	color: #FFFFFF;
+
+	display: block;
+
+	line-height: 25px;
+
+	padding: 0 12px; /*Abstand zwischen Menutitel*/
+
+	text-decoration: none;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+}
+
+#access ul ul {
+
+	background: black;
+
+	display: none;
+
+	position: absolute;
+
+	top: 21px;
+
+	left: 0px;
+
+	float: left;
+
+	/*width: 110px;*/
+
+	z-index: 99999;
+
+	-moz-border-radius-bottom: 8px;
+
+	border-radius-bottom: 8px;
+
+	//hinzugefügt
+
+	-webkit-border-radius:8px; // Für Apple Safari
+
+	behavior:url(border-radius.htc); // Für Internet Explorer
+
+
+
+
+
+}
+
+#access ul ul li {
+
+	/*min-width: 180px;*/
+
+}
+
+#access ul ul ul {
+
+	left: 100%;
+
+	top: 0;
+
+}
+
+#access ul ul a {
+
+	
+
+	line-height: 1em;
+
+	padding: 5px;
+
+	margin-left:8px;
+
+	width: 120px;
+
+	height: 12px;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+	font-weight:normal;
+
+	font-size: 11px;
+
+	line-height: 12px;
+
+}
+
+#access li:hover > a {
+
+	background: none;
+
+	color: gray;
+
+}
+
+#access ul ul :hover > a {
+
+	background: black;
+
+	color: gray;
+
+}
+
+#access ul li:hover > ul {
+
+	display: block;
+
+	top: 21px;
+
+}
+
+#access ul li.current_page_item > a,
+
+#access ul li.current-menu-ancestor > a,
+
+#access ul li.current-menu-item > a,
+
+#access ul li.current-menu-parent > a {
+
+	color: #fff;
+
+}
+
+* html #access ul li.current_page_item a,
+
+* html #access ul li.current-menu-ancestor a,
+
+* html #access ul li.current-menu-item a,
+
+* html #access ul li.current-menu-parent a,
+
+* html #access ul li a:hover {
+
+	color: #fff;
+
+}
+
+
+
+
+
+/* =Content
+
+-------------------------------------------------------------- */
+
+
+
+.beitragsbildli {
+
+	width:auto;
+
+	background:transparent;
+
+	padding-left: 8px;
+
+	padding-right: 8px;
+
+	padding-bottom: 8px;
+
+}
+
+#resultate_h {
+
+}
+
+#resultate_h th {padding:0px 0px;}
+
+/* START RANGLISTE */
+
+#rangliste_h {
+
+	line-height: 8px;
+
+	width: 450px;
+
+	padding-bottom:15px;
+
+}
+
+
+
+#rangliste_h .tableNIStdHL,
+
+.tableNIStdHL a:link,
+
+.tableNIStdHL a:visited {
+
+	color:white;
+
+}
+
+#rangliste_h .tableNIStd,
+
+.tableNIStd a:link,
+
+.tableNIStd a:visited {
+
+	color:white;
+
+}
+
+.tableNIStd a:hover {
+
+	color:gray;
+
+}
+
+
+
+
+
+#rangliste_home {
+
+	line-height: 16px;
+
+	width: 100%;
+
+	padding-bottom:15px;
+
+}
+
+
+
+#rangliste_home .tableNIStdHL,
+
+.tableNIStdHL a:link,
+
+.tableNIStdHL a:visited {
+
+	color:white;
+
+}
+
+
+
+#wipking .tableNIStdHL,
+
+#wipking .tableNIStdHL a:link,
+
+#wipking .tableNIStdHL a:visited,
+
+#wipking .tableNIStdHLBL,
+
+#wipking .tableNIStdHLBL a:link,
+
+#wipking .tableNIStdHLBL a:visited,
+
+#wipking .tableNIStd,
+
+#wipking .tableNIStd a:link,
+
+#wipking .tableNIStd a:visited,
+
+#wipking .tableNISBL,
+
+#wipking .tableNISBL a:link,
+
+#wipking .tableNISBL a:visited  {
+
+	color:#E0DC23;
+
+	font-weight:normal;
+
+}
+
+#wipking .tableNIStdHL a:hover,
+
+#wipking .tableNIStdHLBL a:hover,
+
+#wipking .tableNIStd a:hover,
+
+#wipking .tableNISBL a:hover  {
+
+	color:gray;
+
+}
+
+
+
+.tableNIStdHL a:hover {
+
+	color:gray;
+
+}
+
+/*ENDE RANGLISTE*/
+
+
+
+/*Eintrag fuer Seitentitel*/
+
+#seitentitel {
+
+	width:100%;	
+
+	color: white;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+	font-size: 13px;
+
+	font-weight: bold;
+
+	line-height: 1.3em;
+
+	margin-bottom: 0;
+
+	background: transparent;
+
+	/*Abstand um Titel des Posts*/
+
+	padding-top:0px;
+
+	padding-left:0px;
+
+	/*border-left:black;
+
+	border-left:1px;
+
+	border-left-color:black;
+
+	border-left-style:solid;
+
+	border-right:1px;
+
+	border-right-color:black;
+
+	border-right-style:solid;*/
+
+}
+
+
+
+/*Ende Eintrag fuer Seitentitel*/
+
+
+
+/*LINKS OBEN RECHTS UND CO*/
+
+
+
+#Facebook  {
+
+	background-image:url("/01_bilder/logo_links/facebook_farbig.png");
+
+	display:block;font-size:12px;
+
+	font-weight:bold;width:100px;
+
+	height:25px;padding-top:8px;
+
+	padding-left:40px;
+
+	margin:1px;
+
+	background-repeat:no-repeat;
+
+	background-position: left bottom;
+
+}
+
+#Facebook:hover{
+
+	  background-image:url("/01_bilder/logo_links/facebook_sw.png");
+
+	  background-repeat:no-repeat;
+
+}
+
+
+
+  #FVRZ  {background-image:url("/01_bilder/logo_links/fvrz_farbig.png");display:block;font-size:12px;font-weight:bold;width:100px;height:25px;padding-left:40px;margin:1px;background-repeat:no-repeat;background-position: left bottom;}
+
+  #FVRZ:hover{background-image:url("/01_bilder/logo_links/fvrz_sw.png");background-repeat:no-repeat;}
+
+  
+
+#Login  {
+
+	background-image:url("/01_bilder/logo_links/scw_farbig.png");
+
+	display:block;
+
+	font-size:12px;
+
+	font-weight:bold;
+
+	width:100px;
+
+	height:25px;
+
+	padding-left:40px;
+
+	padding-bottom:0px;
+
+	margin:1px;
+
+	background-repeat:no-repeat;
+
+	background-position: left bottom;
+
+}
+
+#Login:hover {
+
+	background-image:url("/01_bilder/logo_links/scw_sw.png");
+
+	background-repeat:no-repeat;
+
+}
+
+
+#UPDATE  {
+
+	background-image:url("/01_bilder/logo_links/database_farbig.png");
+
+	display:block;
+
+	font-size:12px;
+
+	font-weight:bold;
+
+	width:150px;
+
+	height:25px;
+
+	padding-left:40px;
+
+	padding-bottom:0px;
+
+	margin:1px;
+
+	background-repeat:no-repeat;
+
+	background-position: left bottom;
+
+}
+
+#UPDATE:hover {
+
+	background-image:url("/01_bilder/logo_links/database_sw.png");
+
+	background-repeat:no-repeat;
+
+}
+
+
+
+/*ENDE LINKS OBEN RECHTS UND CO*/
+
+
+
+#main {
+
+	clear: both;
+
+	overflow: hidden;
+
+	padding: 15px 0 0 0;
+
+}
+
+#content {
+
+	margin-bottom: 36px;
+
+}
+
+#content {
+
+	color: #333;
+
+	font-size: 16px;
+
+	line-height: 18px;
+
+
+
+}
+
+#content p,
+
+#content ul,
+
+#content ol,
+
+#content dd,
+
+#content pre {
+
+	margin-bottom: 0px;
+
+	padding-bottom: 15px; /*Abstand zwischen Kommentar und Beitragstext*/
+
+}
+
+#content ul ul,
+
+#content ol ol,
+
+#content ul ol,
+
+#content ol ul {
+
+	margin-bottom: 0;
+
+}
+
+#content pre,
+
+#content kbd,
+
+#content tt,
+
+#content var {
+
+	font-size: 15px;
+
+	line-height: 21px;
+
+}
+
+#content code {
+
+	font-size: 13px;
+
+}
+
+#content dt,
+
+#content th {
+
+	color: #000;
+
+}
+
+#content h1,
+
+#content h2,
+
+#content h3,
+
+#content h4,
+
+#content h5,
+
+#content h6 {
+
+	color: #000;
+
+	line-height: 1.5em;
+
+	margin: 0 0 4px 0;
+
+	// damit iphone schrift nicht vergrössert
+
+	-webkit-text-size-adjust: none;
+
+
+
+}
+
+#content table {
+
+	/*border: 1px solid #e7e7e7;*/
+
+	border: none;
+
+	margin: 0 -1px 4px 0;
+
+	text-align: left;
+
+
+
+
+
+	
+
+}
+
+#content tr th,
+
+#content thead th {
+
+	color: #888;
+
+	font-size: 11px;
+
+	font-weight: bold;
+
+	line-height: 18px;
+
+	padding: 9px 24px;
+
+}
+
+#content tr td {
+
+	/*border-top: 1px solid #e7e7e7;*/
+
+	border-top:none;
+
+	/*padding: 6px 24px;*/
+
+	padding: 6px 0px;
+
+	
+
+}
+
+#content tr.odd td {
+
+	background: #f2f7fc;
+
+}
+
+.hentry, .not-found {
+
+	width:100%;
+
+	background: transparent;
+
+	background-image: url(http://www.scwipkingen.ch/wp-content/themes/scwipkingen/images/transpback.png);
+
+	background-repeat: repeat;	
+
+	margin: 0 0 20px 0;
+
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+
+	-moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+
+	-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+
+	
+
+	-moz-border-radius: 8px;
+
+	border-radius: 8px;
+
+	//hinzugefügt
+
+	-webkit-border-radius:8px; // Für Apple Safari
+
+	behavior:url(border-radius.htc); // Für Internet Explorer
+
+	
+
+	/* macht schrift grusig
+
+	//Schatten fuer IE
+
+	zoom: 1;
+
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#1E1E1E', Direction=135, Strength=5);
+
+	*/
+
+}
+
+.home .sticky {
+
+	background: #f2f7fc;
+
+	border-top: 4px solid #000;
+
+	margin-left: -20px;
+
+	margin-right: -20px;
+
+	padding: 18px 20px;
+
+}
+
+.single .hentry {
+
+	margin: 0 0 36px 0;
+
+}
+
+.page-title {
+
+	color: #000;
+
+	font-size: 12px;
+
+	font-weight: bold;
+
+	margin: 0 0 36px 0;
+
+	
+
+}
+
+.page-title span {
+
+	color: #333;
+
+	font-size: 16px;
+
+	font-style: italic;
+
+	font-weight: normal;
+
+}
+
+.page-title a:link,
+
+.page-title a:visited {
+
+	color: #888;
+
+	text-decoration: none;
+
+}
+
+.page-title a:active,
+
+.page-title a:hover {
+
+	color: #ff4b33;
+
+}
+
+#content .entry-title {
+
+	width:100%;
+
+	color: white;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+	font-size: 13px;
+
+	font-weight: bold;
+
+	line-height: 1.3em;
+
+	margin-bottom: 0;
+
+	background: transparent;
+
+	/*Abstand um Titel des Posts*/
+
+	padding-top:10px;
+
+	padding-left:8px;
+
+	/*border-left:black;
+
+	border-left:1px;
+
+	border-left-color:black;
+
+	border-left-style:solid;
+
+	border-right:1px;
+
+	border-right-color:black;
+
+	border-right-style:solid;*/
+
+}
+
+.entry-title a:link,
+
+.entry-title a:visited {
+
+	color: white;
+
+	text-decoration: none;
+
+}
+
+.entry-title a:active,
+
+.entry-title a:hover {
+
+	color: #999;
+
+}
+
+.entry-meta {
+
+	color: white;
+
+	font-size: 11px;
+
+	background: none;
+
+	padding-left:8px; /*Textabstand links ERSTELLUNGSDATUM*/
+
+	padding-right:8px;
+
+	line-height: 10px;
+
+}
+
+
+
+.entry-meta hr {
+
+	background: gray;
+
+	color: gray;
+
+	padding-left: 0px;
+
+	padding-right: 0px;
+
+	height: 1px;
+
+	width:100%;
+
+	margin:0;
+
+	margin-bottom:8px;
+
+}
+
+
+
+.entry-date {
+
+	color: gray;
+
+	font-size:11px;
+
+	line-height: 24px;
+
+}
+
+.entry-meta abbr,
+
+.entry-utility abbr {
+
+	border: none;
+
+}
+
+.entry-meta abbr:hover,
+
+.entry-utility abbr:hover {
+
+	border-bottom: 1px dotted #666;
+
+}
+
+.entry-content,
+
+.entry-summary {
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+	color: white;
+
+	font-size:11px;
+
+	clear: both;
+
+	/*Textabstand um POST*/
+
+	/*padding-top:8px;*/
+
+	padding-left:8px;
+
+	padding-right:8px;
+
+	padding-top:8px;
+
+	background: transparent;
+
+	list-style:square;
+
+	list-style-position:inside;
+
+	/*border-left:1px;
+
+	border-left-color:black;
+
+	border-left-style:solid;
+
+	border-right:1px;
+
+	border-right-color:black;
+
+	border-right-style:solid;*/
+
+}
+
+.entry-summary a:link,
+
+.entry-summary a:visited,
+
+.entry-summary a:active {
+
+	color: gray;
+
+	text-decoration: none;
+
+}
+
+.entry-summary a:hover {
+
+	color: white;
+
+}
+
+
+
+#content .entry-summary p:last-child {
+
+	margin-bottom: 12px;
+
+}
+
+.entry-content fieldset {
+
+	border: 1px solid #e7e7e7;
+
+	margin: 0 0 24px 0;
+
+	padding: 24px;
+
+}
+
+.entry-content fieldset legend {
+
+	background: #fff;
+
+	color: #000;
+
+	font-weight: bold;
+
+	padding: 0 24px;
+
+}
+
+.entry-content input {
+
+	margin: 0 0 0px 0;
+
+}
+
+.entry-content input.file,
+
+.entry-content input.button {
+
+	margin-right: 24px;
+
+}
+
+.entry-content label {
+
+	color: #888;
+
+	font-size: 11px;
+
+}
+
+.entry-content select {
+
+	margin: 0 0 24px 0;
+
+}
+
+.entry-content sup,
+
+.entry-content sub {
+
+	font-size: 10px;
+
+}
+
+.entry-content blockquote.left {
+
+	float: left;
+
+	margin-left: 0;
+
+	margin-right: 24px;
+
+	text-align: right;
+
+	width: 33%;
+
+}
+
+.entry-content blockquote.right {
+
+	float: right;
+
+	margin-left: 24px;
+
+	margin-right: 0;
+
+	text-align: left;
+
+	width: 33%;
+
+}
+
+.page-link {
+
+	color: #000;
+
+	font-weight: bold;
+
+	margin: 0 0 22px 0;
+
+	word-spacing: 0.5em;
+
+}
+
+.page-link a:link,
+
+.page-link a:visited {
+
+	background: #f1f1f1;
+
+	color: #333;
+
+	font-weight: normal;
+
+	padding: 0.5em 0.75em;
+
+	text-decoration: none;
+
+}
+
+.home .sticky .page-link a {
+
+	background: #d9e8f7;
+
+}
+
+.page-link a:active,
+
+.page-link a:hover {
+
+	color: #ff4b33;
+
+}
+
+body.page .edit-link {
+
+	clear: both;
+
+	display: block;
+
+}
+
+#entry-author-info {
+
+	background: #f2f7fc;
+
+	border-top: 4px solid #000;
+
+	clear: both;
+
+	font-size: 12px;
+
+	line-height: 20px;
+
+	margin: 24px 0;
+
+	overflow: hidden;
+
+	padding: 18px 20px;
+
+}
+
+#entry-author-info #author-avatar {
+
+	background: #fff;
+
+	border: 1px solid #e7e7e7;
+
+	float: left;
+
+	height: 60px;
+
+	margin: 0 -104px 0 0;
+
+	padding: 11px;
+
+}
+
+#entry-author-info #author-description {
+
+	float: left;
+
+	margin: 0 0 0 104px;
+
+}
+
+#entry-author-info h2 {
+
+	color: #000;
+
+	font-size: 100%;
+
+	font-weight: bold;
+
+	margin-bottom: 0;
+
+}
+
+.entry-utility {
+
+	clear: both;
+
+	color: gray;
+
+	font-size: 11px;
+
+	line-height: 18px;
+
+	background:transparent;
+
+	/*textabstand um KOMMENTAR*/
+
+	padding-left:8px;
+
+	padding-bottom:10px;
+
+	/*border-bottom:1px;
+
+	border-bottom-color:black;
+
+	border-bottom-style:solid;
+
+	border-left:1px;
+
+	border-left-color:black;
+
+	border-left-style:solid;
+
+	border-right:1px;
+
+	border-right-color:black;
+
+	border-right-style:solid;*/
+
+}
+
+.entry-meta a {
+
+	color: white;
+
+}
+
+.entry-utility a {
+
+	color:gray;
+
+	text-decoration: none;
+
+}
+
+/*
+
+.entry-meta a:hover,*/
+
+.entry-utility a:hover {
+
+	color: white;
+
+}
+
+#content .video-player {
+
+	padding: 0;
+
+}
+
+
+
+
+
+
+
+/* =Asides
+
+-------------------------------------------------------------- */
+
+
+
+.home #content .category-asides p {
+
+	font-size: 14px;
+
+	line-height: 20px;
+
+	margin-bottom: 10px;
+
+	margin-top: 0;
+
+}
+
+.home .hentry.category-asides {
+
+	padding: 0;
+
+}
+
+.home #content .category-asides .entry-content {
+
+	padding-top: 0;
+
+}
+
+
+
+
+
+/* =Gallery listing
+
+-------------------------------------------------------------- */
+
+
+
+.category-gallery .size-thumbnail img {
+
+	border: 10px solid #f1f1f1;
+
+	margin-bottom: 0;
+
+}
+
+.category-gallery .gallery-thumb {
+
+	float: left;
+
+	margin-right: 20px;
+
+	margin-top: -4px;
+
+}
+
+.home #content .category-gallery .entry-utility {
+
+	padding-top: 4px;
+
+}
+
+
+
+
+
+/* =Attachment pages
+
+-------------------------------------------------------------- */
+
+
+
+.attachment .entry-content .entry-caption {
+
+	font-size: 140%;
+
+	margin-top: 24px;
+
+}
+
+.attachment .entry-content .nav-previous a:before {
+
+	content: '\2190\00a0';
+
+}
+
+.attachment .entry-content .nav-next a:after {
+
+	content: '\00a0\2192';
+
+}
+
+
+
+
+
+/* =Images
+
+-------------------------------------------------------------- */
+
+
+
+#content img {
+
+	margin: 0;
+
+	height: auto;
+
+	/*max-width: 640px;*/
+
+	width: auto;
+
+}
+
+#content .attachment img {
+
+	max-width: 900px;
+
+}
+
+#content .alignleft,
+
+#content img.alignleft {
+
+	display: inline;
+
+	float: left;
+
+	margin-right: 24px;
+
+	margin-top: 4px;
+
+}
+
+#content .alignright,
+
+#content img.alignright {
+
+	display: inline;
+
+	float: right;
+
+	margin-left: 24px;
+
+	margin-top: 4px;
+
+}
+
+#content .aligncenter,
+
+#content img.aligncenter {
+
+	clear: both;
+
+	display: block;
+
+	margin-left: auto;
+
+	margin-right: auto;
+
+}
+
+#content img.alignleft,
+
+#content img.alignright,
+
+#content img.aligncenter {
+
+	margin-bottom: 12px;
+
+}
+
+#content .wp-caption {
+
+	background: #f1f1f1;
+
+	line-height: 18px;
+
+	margin-bottom: 20px;
+
+	padding: 4px;
+
+	text-align: center;
+
+}
+
+#content .wp-caption img {
+
+	margin: 5px 5px 0;
+
+}
+
+#content .wp-caption p.wp-caption-text {
+
+	color: #888;
+
+	font-size: 11px;
+
+	margin: 5px;
+
+}
+
+#content .wp-smiley {
+
+	margin: 0;
+
+}
+
+#content .gallery {
+
+	margin: 0 auto 18px;
+
+}
+
+#content .gallery .gallery-item {
+
+	float: left;
+
+	margin-top: 0;
+
+	text-align: center;
+
+	width: 33%;
+
+}
+
+#content .gallery img {
+
+	border: 2px solid #cfcfcf;
+
+}
+
+#content .gallery .gallery-caption {
+
+	color: #888;
+
+	font-size: 11px;
+
+	margin: 0 0 12px;
+
+}
+
+#content .gallery dl {
+
+	margin: 0;
+
+}
+
+#content .gallery img {
+
+	border: 10px solid #f1f1f1;
+
+}
+
+#content .gallery br+br {
+
+	display: none;
+
+}
+
+#content .attachment img { /* single attachment images should be centered */
+
+	display: block;
+
+	margin: 0 auto;
+
+}
+
+
+
+
+
+/* =Navigation
+
+-------------------------------------------------------------- */
+
+
+
+.navigation {
+
+	color: #888;
+
+	font-size: 11px;
+
+	line-height: 18px;
+
+	overflow: hidden;
+
+}
+
+.navigation a:link,
+
+.navigation a:visited {
+
+	color: #E0DC23;
+
+	text-decoration: none;
+
+}
+
+.navigation a:active,
+
+.navigation a:hover {
+
+	color: white;
+
+}
+
+.nav-previous {
+
+	float: left;
+
+	width: 50%;
+
+}
+
+.nav-next {
+
+	float: right;
+
+	text-align: right;
+
+	width: 50%;
+
+}
+
+#nav-above {
+
+	margin: 0 0 18px 0;
+
+}
+
+#nav-above {
+
+	display: none;
+
+}
+
+.paged #nav-above,
+
+.single #nav-above {
+
+	display: block;
+
+}
+
+#nav-below {
+
+	margin: -18px 0 0 0;
+
+}
+
+
+
+
+
+/* =Comments
+
+-------------------------------------------------------------- */
+
+#comments {
+
+	zoom:1;
+
+	clear: both;
+
+	/*background: transparent;*/
+
+	background-image: url(http://www.scwipkingen.ch/wp-content/themes/scwipkingen/images/transpback.png);
+
+	background-repeat: repeat;
+
+	margin: 0 0 20px 0;
+
+	padding-left: 8px;
+
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+
+	-moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+
+	-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+
+	
+
+	-moz-border-radius: 8px;
+
+	border-radius: 8px;
+
+	//hinzugefügt
+
+	-webkit-border-radius:8px; // Für Apple Safari
+
+	behavior:url(border-radius.htc); // Für Internet Explorer
+
+	
+
+	padding-left:8px;
+
+}
+
+#comments .navigation {
+
+	padding: 0 0 18px 0;
+
+}
+
+h3#comments-title,
+
+h3#reply-title {
+
+	color: white;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+	font-size: 13px;
+
+	font-weight: bold;
+
+	line-height: 1.3em;
+
+	margin-bottom: 0;
+
+	background: none;
+
+	/*Abstand um Titel des Posts*/
+
+	padding-top:10px;
+
+	padding-left:8px;
+
+	/*border-left:black;
+
+	border-left:1px;
+
+	border-left-color:black;
+
+	border-left-style:solid;
+
+	border-right:1px;
+
+	border-right-color:black;
+
+	border-right-style:solid;*/
+
+}
+
+h3#comments-title {
+
+	padding: 24px 0;
+
+}
+
+.commentlist {
+
+	list-style: none;
+
+	margin: 0;
+
+}
+
+.commentlist li.comment {
+
+	border-bottom: 1px solid gray;
+
+	line-height: 24px;
+
+	margin: 0 0 24px 0;
+
+	padding: 0 0 0 0px;
+
+	margin-right:8px;
+
+	position: relative;
+
+	color:white;
+
+	font-size:11px;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+}
+
+.commentlist li:last-child {
+
+	border-bottom: none;
+
+	margin-bottom: 0;
+
+}
+
+#comments .comment-body ul,
+
+#comments .comment-body ol {
+
+	margin-bottom: 18px;
+
+}
+
+#comments .comment-body p:last-child {
+
+	margin-bottom: 6px;
+
+	padding-bottom:0;
+
+}
+
+#comments .comment-body blockquote p:last-child {
+
+	margin-bottom: 24px;
+
+}
+
+.commentlist ol {
+
+	list-style: decimal;
+
+}
+
+.commentlist .avatar {
+
+	position: absolute;
+
+	top: 4px;
+
+	left: 0;
+
+}
+
+.comment-author {
+
+}
+
+.comment-author cite {
+
+	font-style:oblique;
+
+	font-weight: normal;
+
+}
+
+.comment-author .says {
+
+	font-style: italic;
+
+}
+
+.comment-meta {
+
+	font-size: 11px;
+
+	margin: 0 0 18px 0;
+
+}
+
+.comment-meta a:link,
+
+.comment-meta a:visited {
+
+	color: #888;
+
+	text-decoration: none;
+
+}
+
+.comment-meta a:active,
+
+.comment-meta a:hover {
+
+	color: #ff4b33;
+
+}
+
+.commentlist .even {
+
+}
+
+.commentlist .bypostauthor {
+
+}
+
+.reply {
+
+	font-size: 11px;
+
+	padding-bottom:15px;
+
+	margin-top:-10px;
+
+}
+
+.reply a,
+
+a.comment-edit-link {
+
+	color: gray;
+
+	text-decoration:none;
+
+}
+
+.reply a:hover,
+
+a.comment-edit-link:hover {
+
+	color: white;
+
+}
+
+.commentlist .children {
+
+	list-style: none;
+
+	margin: 0;
+
+}
+
+.commentlist .children li {
+
+	border: none;
+
+	margin: 0;
+
+}
+
+.nopassword,
+
+.nocomments {
+
+	display: none;
+
+}
+
+#comments .pingback {
+
+	border-bottom: 1px solid #e7e7e7;
+
+	margin-bottom: 18px;
+
+	padding-bottom: 18px;
+
+}
+
+.commentlist li.comment+li.pingback {
+
+	margin-top: -6px;
+
+}
+
+#comments .pingback p {
+
+	color: #888;
+
+	display: block;
+
+	font-size: 11px;
+
+	line-height: 18px;
+
+	margin: 0;
+
+}
+
+#comments .pingback .url {
+
+	font-size: 13px;
+
+	font-style: italic;
+
+}
+
+
+
+/* Comments form */
+
+input[type=submit] {
+
+	color: none;
+
+}
+
+#respond {
+
+	border-top: 1px solid gray;
+
+	margin: 24px 0;
+
+	margin-right:8px;
+
+	overflow: hidden;
+
+	position: relative;
+
+	color: white;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+	font-size: 11px;
+
+	
+
+}
+
+#respond p {
+
+	margin: 0;
+
+}
+
+#respond a:link {
+
+	color:white;
+
+	text-decoration:none;
+
+}
+
+#respond a:visited {
+
+	color:white;
+
+	text-decoration:none;
+
+}
+
+#respond a:hover {
+
+	color:gray;
+
+	text-decoration:none;
+
+}
+
+#respond .comment-notes {
+
+	margin-bottom: 1em;
+
+}
+
+.form-allowed-tags {
+
+	line-height: 1em;
+
+}
+
+.children #respond {
+
+	margin: 0 48px 0 0;
+
+}
+
+h3#reply-title {
+
+	margin: 18px 0;
+
+	padding-left:0;
+
+}
+
+#comments-list #respond {
+
+	margin: 0 0 18px 0;
+
+}
+
+#comments-list ul #respond {
+
+	margin: 0;
+
+}
+
+#cancel-comment-reply-link {
+
+	font-size: 11px;
+
+	font-weight: normal;
+
+	line-height: 18px;
+
+}
+
+#respond .required {
+
+	color: gray;
+
+	font-weight: bold;
+
+}
+
+#respond label {
+
+	color: #888;
+
+	font-size: 11px;
+
+}
+
+#respond input {
+
+	margin: 0 0 9px;
+
+	width: 98%;
+
+	background:rgb(74,74,74);
+
+	border:none;
+
+	color:white;
+
+	font-size:11px;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+	/*	
+
+	-moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+    -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+    box-shadow: inset 0 3px 8px rgba(0,0,0,.4);*/
+
+}
+
+#respond textarea {
+
+	width: 98%;
+
+	background:rgb(74,74,74);
+
+	border:none;
+
+	color:white;
+
+	font-size:11px;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+		
+
+	-moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+    -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+    box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+}
+
+#respond .form-allowed-tags {
+
+	color: #888;
+
+	font-size: 11px;
+
+	line-height: 18px;
+
+}
+
+#respond .form-allowed-tags code {
+
+	font-size: 11px;
+
+}
+
+#respond .form-submit {
+
+	margin: 12px 0;
+
+}
+
+#respond .form-submit input {
+
+	font-size: 11px;
+
+	width: auto;
+
+	color: black;
+
+	background:gray;
+
+}
+
+#respond .form-submit input:hover {
+
+	color:white;
+
+}
+
+
+
+
+
+
+
+/* =Widget Areas
+
+-------------------------------------------------------------- */
+
+
+
+.links_slideshow,
+
+.phpText {
+
+	/*
+
+	background:white;
+
+	border:1px black;
+
+	border-style:solid;*/
+
+}
+
+
+
+.widget-area ul {
+
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+	list-style: none;
+
+	margin-left: 0;
+
+	// damit iphone schrift nicht vergrössert
+
+	-webkit-text-size-adjust: none;
+
+
+
+	
+
+}
+
+.widget-area ul ul {
+
+	list-style: square;
+
+	margin-left: 1.3em;
+
+}
+
+
+
+.widget_search {/* This keeps the search inputs in line */
+
+	
+
+	position:relative;
+
+	height:30px;
+
+	padding-left:40px;
+
+	background:none;
+
+	margin-top:0px;
+
+	padding-right:4px;	
+
+}
+
+/* kein suchresultat - eingabefeld */
+
+div.entry-content #searchform input#s {
+
+	background-color:rgb(74,74,74);
+
+	color: white;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+	font-size: 11px;
+
+	border:none;
+
+	width: 200px;
+
+	margin-right:20px;	
+
+	-moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+    -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+    box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+}
+
+/* beginn button keine suchresultate */
+
+div.entry-content #searchform input#searchsubmit {
+
+	font-size: 11px;
+
+	width: auto;
+
+	color: black;
+
+	background:gray;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+	border:none;
+
+}
+
+div.entry-content #searchform input#searchsubmit:hover {
+
+	color:white;
+
+}
+
+/* ende button keine suchresultate*/
+
+/* start kontaktformular */
+
+.wpcf7-form-control-wrap input {
+
+	background-color:rgb(74,74,74);
+
+	color: white;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+	font-size: 11px;
+
+	border:none;
+
+	width: 200px;	
+
+	-moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+    -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+    box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+}
+
+
+
+.wpcf7-form-control-wrap textarea {
+
+	background-color:rgb(74,74,74);
+
+	color: white;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+	font-size: 11px;
+
+	border:none;
+
+	width: 400px;	
+
+	-moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+    -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+    box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+}
+
+.wpcf7-submit {
+
+	font-size: 11px;
+
+	width: auto;
+
+	color: black;
+
+	background:gray;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+	border:none;
+
+}
+
+.wpcf7-submit:hover {
+
+	color:white;
+
+}
+
+/* ende kontaktformular */
+
+
+
+.widget_search #s {
+
+	position:relative;
+
+	background-color:rgb(74,74,74);
+
+	color: white;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+	font-size: 11px;
+
+	border:none;
+
+	width: 100%;	
+
+	-moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+    -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+    box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+
+}
+
+.widget_search label {
+
+	display: none;
+
+
+
+}
+
+
+
+.widget_search #searchsubmit {   /*Knopf*/
+
+	color: transparent;
+
+	position: absolute;
+
+	top:0px;
+
+	left:1px;
+
+    	width:25px;
+
+	height:25px;
+
+	background-image:url(/01_bilder/logo_links/suche_farbig.png);
+
+	background-color:transparent;
+
+	font-size:0;
+
+	border:none;
+
+}
+
+ 
+
+.widget_search #searchsubmit:hover {
+
+	background-image:url(/01_bilder/logo_links/suche_sw.png);
+
+	color: transparent;
+
+	
+
+	border: none; 
+
+}
+
+.widget-container {
+
+}
+
+.widget-title {
+
+	width: auto;
+
+	color: white;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+// damit iphone schrift nicht vergrössert
+
+	-webkit-text-size-adjust: none;
+
+	font-size: 13px;
+
+	font-weight: bold;
+
+	line-height: 1.3em;
+
+	margin-bottom: 0;
+
+	background: transparent;
+
+	padding-top:10px;
+
+	
+
+	margin-bottom:8px;
+
+	padding-bottom:7px;
+
+	border-bottom:1px;
+
+	border-bottom-color: gray;
+
+	border-bottom-style: solid;
+
+	}
+
+.widget-area a:link { 
+
+	color:white;
+
+	text-decoration:none;
+
+}
+
+.widget-area a:visited {
+
+	text-decoration: none;
+
+	color:white;
+
+}
+
+.widget-area a:active {
+
+	color:white;
+
+	text-decoration:none;
+
+}
+
+.widget-area a:hover {
+
+	text-decoration: none;
+
+	color: gray;
+
+	
+
+}
+
+
+
+.widget-area .entry-meta {
+
+	font-size: 11px;
+
+}
+
+#wp_tag_cloud div {
+
+	line-height: 1.6em;
+
+}
+
+#wp-calendar {
+
+	width: 100%;
+
+}
+
+#wp-calendar caption {
+
+	color: #222;
+
+	font-size: 14px;
+
+	font-weight: bold;
+
+	padding-bottom: 4px;
+
+	text-align: left;
+
+}
+
+#wp-calendar thead {
+
+	font-size: 11px;
+
+}
+
+#wp-calendar thead th {
+
+}
+
+#wp-calendar tbody {
+
+	color: #aaa;
+
+}
+
+#wp-calendar tbody td {
+
+	background: #f5f5f5;
+
+	border: 1px solid #fff;
+
+	padding: 3px 0 2px;
+
+	text-align: center;
+
+}
+
+#wp-calendar tbody .pad {
+
+	background: none;
+
+}
+
+#wp-calendar tfoot #next {
+
+	text-align: right;
+
+}
+
+.widget_rss a.rsswidget {
+
+	color: #000;
+
+}
+
+.widget_rss a.rsswidget:hover {
+
+	color: #ff4b33;
+
+}
+
+.widget_rss .widget-title img {
+
+	width: 11px;
+
+	height: 11px;
+
+}
+
+
+
+
+
+#likebox-frame{
+
+ border:none;
+
+ z-index:10;
+
+ overflow: hidden;
+
+ position:relative;
+
+ top:-1px;
+
+ left:-2px;
+
+}
+
+#likebox-frame iframe{
+
+  left:-5px;
+
+  overflow:hidden;
+
+  position:relative;
+
+  top:-1px;
+
+}
+
+
+
+
+
+
+
+/* Main sidebars */
+
+#main .widget-area ul {
+
+	width:203px;
+
+	background-image: url(http://www.scwipkingen.ch/wp-content/themes/scwipkingen/images/transpback.png);
+
+	background-repeat: repeat;
+
+	padding-left: 8px;
+
+	padding-right: 8px;
+
+	margin-left: 0;
+
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+
+	-moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+
+	-webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+
+	-moz-border-radius: 8px;
+
+	border-radius: 8px;
+
+	//hinzugefügt
+
+	-webkit-border-radius:8px; // Für Apple Safari
+
+	behavior:url(border-radius.htc); // Für Internet Explorer
+
+// damit iphone schrift nicht vergrössert
+
+-webkit-text-size-adjust: none;
+
+
+
+
+
+		
+
+}
+
+#main .widget-area ul ul {
+
+	border: none;
+
+	margin-left: 1.3em;
+
+	padding: 0;
+
+}
+
+#primary,#secondary {
+
+
+
+}
+
+
+
+/* Footer widget areas */
+
+#footer-widget-area {
+
+}
+
+
+
+
+
+/* =Footer
+
+-------------------------------------------------------------- */
+
+
+
+#footer {
+
+	margin-bottom: 20px;
+
+	padding-left:8px;
+
+	padding-top:4px;
+
+	height:125px;
+
+	background-image:url(http://www.scwipkingen.ch/wp-content/themes/scwipkingen/images/footer.png);
+
+	background-repeat:no-repeat;
+
+}
+
+/*#colophon {
+
+	border-top: 1px solid #666;
+
+	margin-top: -4px;
+
+	overflow: hidden;
+
+	padding: 18px 0;
+
+}*/
+
+#site-info {
+
+	
+
+}
+
+#footer a {
+
+	color: black;
+
+	text-decoration: none;
+
+	font-size: 10px;
+
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Lucida, Verdana, sans-serif;
+
+}
+
+#footer td {
+
+	line-height:10px;
+
+}
+
+#footer td a {
+
+	color:#333;
+
+}
+
+#footer a:hover{
+
+	color:#666;
+
+}
+
+#site-generator {
+
+	font-style: italic;
+
+	position: relative;
+
+}
+
+#site-generator a {
+
+	background: url(images/wordpress.png) center left no-repeat;
+
+	color: #666;
+
+	display: inline-block;
+
+	line-height: 16px;
+
+	padding-left: 20px;
+
+	text-decoration: none;
+
+}
+
+#site-generator a:hover {
+
+	text-decoration: underline;
+
+}
+
+img#wpstats {
+
+	display: block;
+
+	margin: 0 auto 10px;
+
+}
+
+
+
+
+
+/* =Mobile Safari ( iPad, iPhone and iPod Touch )
+
+-------------------------------------------------------------- */
+
+
+
+pre {
+
+	-webkit-text-size-adjust: 140%;
+
+}
+
+code {
+
+	-webkit-text-size-adjust: 160%;
+
+}
+
+#access,
+
+.entry-meta,
+
+.entry-utility,
+
+.navigation,
+
+.widget-area {
+
+	-webkit-text-size-adjust: 120%;
+
+}
+
+#site-description {
+
+	-webkit-text-size-adjust: none;
+
+}
+
+
+
+
+
+/* =Print Style
+
+-------------------------------------------------------------- */
+
+
+
+@media print {
+
+	body {
+
+		background: none !important;
+
+	}
+
+	#wrapper {
+
+		clear: both !important;
+
+		display: block !important;
+
+		float: none !important;
+
+		position: relative !important;
+
+	}
+
+	#header {
+
+		border-bottom: 2pt solid #000;
+
+		padding-bottom: 18pt;
+
+	}
+
+	#colophon {
+
+		border-top: 2pt solid #000;
+
+	}
+
+	#site-title,
+
+	#site-description {
+
+		float: none;
+
+		line-height: 1.4em;
+
+		margin: 0;
+
+		padding: 0;
+
+	}
+
+	#site-title {
+
+		font-size: 13pt;
+
+	}
+
+	.entry-content {
+
+		font-size: 14pt;
+
+		line-height: 1.6em;
+
+	}
+
+	.entry-title {
+
+		font-size: 21pt;
+
+	}
+
+	#access,
+
+	#branding img,
+
+	#respond,
+
+	.comment-edit-link,
+
+	.edit-link,
+
+	.navigation,
+
+	.page-link,
+
+	.widget-area {
+
+		display: none !important;
+
+	}
+
+	#container,
+
+	#header,
+
+	#footer {
+
+		margin: 0;
+
+		width: 100%;
+
+	}
+
+	#content,
+
+	.one-column #content {
+
+		margin: 24pt 0 0;
+
+		width: 100%;
+
+	}
+
+	.wp-caption p {
+
+		font-size: 11pt;
+
+	}
+
+	#site-info,
+
+	#site-generator {
+
+		float: none;
+
+		width: auto;
+
+	}
+
+	#colophon {
+
+		width: auto;
+
+	}
+
+	img#wpstats {
+
+		display: none;
+
+	}
+
+	#site-generator a {
+
+		margin: 0;
+
+		padding: 0;
+
+	}
+
+	#entry-author-info {
+
+		border: 1px solid #e7e7e7;
+
+	}
+
+	#main {
+
+		display: inline;
+
+	}
+
+	.home .sticky {
+
+		border: none;
+
+	}
+	
+	/* Facebook Comments, RLO */
+	
+	#fbComments {
+		background-color: red;
+	}
+
+}

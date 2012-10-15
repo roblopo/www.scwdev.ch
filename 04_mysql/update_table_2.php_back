@@ -1,0 +1,74 @@
+<html> 
+<head> 
+    <title>Update Spielplan für Countdown</title>     
+    <link rel="stylesheet" href="test.css" type="text/css" /> 
+</head> 
+
+<body style="font-family: verdana; font-size: 11px;"> 
+
+<?php 
+$tabelle = $_POST[tabelle];
+$attribut = $_POST[attribut];
+
+
+$db = "db2438004"; 
+
+#$verbindung = mysql_connect("localhost", "pascal","admin");mysql_select_db("SCW");
+$link=mysql_connect("mysql03.nexlink.ch", "user24380","scw8037");
+
+#$link = mysql_connect(localhost,$username,$password); 
+@ mysql_select_db($db) or die("Could not connect to the desired database."); 
+     
+$query = "SELECT begegnung FROM $tabelle order by spieldatum";
+
+
+$qresult = mysql_query($query) or die(mysql_error()); 
+
+
+
+?> 
+
+    <h2>Update Spielplan für Countdown (2/3)</h2> 
+    
+
+    <p>Wähle die Begegnung und gebe die entsprechenden Daten ein</p> 
+    
+
+
+    <form name="input" action="update_table_3.php" method="post"> 
+
+        <p>Begegnung: <br>
+            <select name="begegnung"> 
+            <!-- Drop down --> 
+            <?php 
+            while($row = mysql_fetch_array($qresult)){ 
+            echo '<option value="' .$row['begegnung']. '">'. $row['begegnung']. '</option>'  ; 
+            } 
+            ?> 
+            <option value="begegnung">Begegnung</option> 
+            </select> </p> 
+
+              
+        <p><?php echo "Attribut: $attribut <br>";?> 
+            <input size="30" maxlength="100" type="text" name="eingabewert"> 
+              
+            <?php if($attribut == "spieldatum") {echo "[YYYY-MM-DD HH:MM:SS] <br>";}
+			      elseif($attribut == "resultat") {echo "[0:0 (0:0)] <br>";}
+				  elseif($attribut == "spielort") {echo "[Platz, Ort] <br>";}
+				  elseif($attribut == "bemerkung") {echo "[Google-Link] <br>";}
+				  else {echo "nur Filename eingeben";}
+			?>
+            
+            
+                   
+            <input type="hidden" name="table" value="<?php echo "$tabelle";?>">
+            <input type="hidden" name="attribut" value="<?php echo "$attribut";?>">
+        <input type="submit" value="--> Update!" name="submit"><p>
+        <a href="../04_mysql/update_table_1.php">zurück</a>
+     
+    </form> 
+
+    
+
+</body> 
+</html>

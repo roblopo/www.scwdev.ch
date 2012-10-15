@@ -1,0 +1,8 @@
+@charset "UTF-8";
+a, .fan_box .connect_action a {font-size:10px;color:white;}, .fan_box .connections_grid .grid_item .name {font-size:10px;font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Lucida, Verdana, sans-serif;color:white !important;}
+.fan_box .full_widget, .fan_box .full_widget .connect_top, .fbConnectWidgetTopmost,.fan_box .full_widget .connect_top {background:none; border:none; color:white;}
+.fan_box .connect_top {padding:10px 0pt 0pt 0pt;}
+.fan_box .connect_widget .connect_widget_text a {font-weight:normal;text-decoration:none;}
+.fan_box .connections {border:none !important; min-height:150px; padding:15px 0 4px 0px;}
+.fan_box .connections_grid .grid_item {padding:0 2px 8px 0;}
+fan_box .connect_action .name {font-size:10px;}

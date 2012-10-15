@@ -1,0 +1,195 @@
+# SponsorsSlideShow POT file.
+# Copyright (C) 2008 Kolja Schleich
+# This file is distributed under the same license as the WordPress package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Sponsors Slideshow Widget 1.9\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/sponsors-slideshow-widget\n"
+"POT-Creation-Date: 2010-01-05 09:53+0000\n"
+"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: sponsors-slideshow-widget.php:69
+msgid "Display specific link category as image slide show"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:70
+msgid "Sponsors Slideshow"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:195
+msgid "Source"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:198 sponsors-slideshow-widget.php:201
+msgid "Category"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:202
+msgid "URL Field"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:203
+msgid "Image Field"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:206
+msgid "Title"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:207
+msgid "Width"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:208
+msgid "Height"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:209
+msgid "Timeout"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:209 sponsors-slideshow-widget.php:210
+msgid "seconds"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:210
+msgid "Speed"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:211
+msgid "Fade Effect"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:212
+msgid "Order"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:227
+msgid "Links"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:227
+msgid "Posts"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Blind X"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Blind Y"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Blind Z"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Cover"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Curtain X"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Curtain Y"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Fade"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Fade Zoom"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Scroll Up"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Scroll Left"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Scroll Right"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Scroll Down"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Scroll Horizontal"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Scroll Vertical"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Shuffle"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Slide X"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Slide Y"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Toss"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Turn Up"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Turn Down"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Turn Left"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Turn Right"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Uncover"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Wipe"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Zoom"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Grow X"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274
+msgid "Grow Y"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:274 sponsors-slideshow-widget.php:294
+msgid "Random"
+msgstr ""
+
+#: sponsors-slideshow-widget.php:294
+msgid "Ordered"
+msgstr ""

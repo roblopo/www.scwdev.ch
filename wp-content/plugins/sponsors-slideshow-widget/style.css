@@ -1,0 +1,52 @@
+.links_slideshow {
+	background-image: none;
+	background-color: transparent;
+	position: relative;
+	display: block;
+	clear: both;
+	text-align: center;
+	margin: 1em auto;
+	padding: 0;
+}
+.links_slideshow a {
+	display: block;
+	text-decoration: none;
+	/*margin: 8px auto;*/
+}
+.links_slideshow img {
+	border: none;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+}
+
+	
+.links_slideshow_control p {
+	text-align: left;
+	clear: both;
+}
+.links_slideshow_control label {
+	padding: 0.5em 0.5em;
+	width: 6em;
+	float: left;
+}
+.links_slideshow_control input {
+	display: inline;
+	clear: none;
+	width: auto;
+	border-width: 1px;
+	border-style: solid;
+	border-collapse: separate;
+	border-spacing: 0;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.links_slideshow_control legend {
+	font-weight: bold;
+	}
+.links_slideshow_control fieldset {
+	border: 1px dashed #ccc;
+	margin-bottom: 0.5em;
+	}
