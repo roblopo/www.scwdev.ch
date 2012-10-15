@@ -5,9 +5,9 @@ $table= $teile[0];
 $game=utf8_encode($teile[1]);
 
 
-$db = "db2438004"; 
+$db = "spieldatenbank_dev"; 
 
-$link=mysql_connect("mysql03.nexlink.ch", "user24380","scw8037");
+$link=mysql_connect("localhost", "root","root");
 
 @ mysql_select_db($db) or die("Could not connect to the desired database."); 
 mysql_set_charset('UTF8',$link);

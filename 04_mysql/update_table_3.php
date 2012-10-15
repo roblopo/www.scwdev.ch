@@ -8,10 +8,10 @@
 <h2>Update Spielplan für Countdown (3/3)</h2>
 <?PHP
 
-$db = "db2438004"; 
+$db = "spieldatenbank_dev"; 
 
 #$verbindung = mysql_connect("localhost", "pascal","admin");mysql_select_db("SCW");
-$link=mysql_connect("mysql03.nexlink.ch", "user24380","scw8037");
+$link=mysql_connect("localhost", "root","root");
 
 #$link = mysql_connect(localhost,$username,$password); 
 @ mysql_select_db($db) or die("Could not connect to the desired database."); 

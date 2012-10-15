@@ -91,13 +91,13 @@ else {
 echo "Folgende Statements werden ausgeführt <br>";
 
 
-$con = mysql_connect("mysql03.nexlink.ch", "user24380","scw8037");
+$con = mysql_connect("localhost", "root","root");
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
   }
 
-mysql_select_db("db2438004", $con);
+mysql_select_db("spieldatenbank_dev", $con);
 
 
 
