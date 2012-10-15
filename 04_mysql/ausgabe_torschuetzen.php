@@ -12,7 +12,7 @@
 
 <?php 
 
-$db = "spieldatenbank_dev_falscherPfad"; 
+$db = "spieldatenbank_dev"; 
 
 $link=mysql_connect("localhost", "root","root");
 
