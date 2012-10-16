@@ -11,7 +11,6 @@
 
 
 <?php 
-// Testkommentar für GIT: Änderungen kommen nur noch in den develop-branch, noch eine Änderung
 $db = "spieldatenbank_dev"; 
 
 $link=mysql_connect("localhost", "root","root");
