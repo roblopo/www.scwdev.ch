@@ -12,7 +12,7 @@
 
 <?php 
 $db = "spieldatenbank_dev"; 
-
+// Testkommentar Nummer 2
 $link=mysql_connect("localhost", "root","root");
 
 
