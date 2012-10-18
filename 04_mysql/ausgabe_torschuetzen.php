@@ -11,11 +11,8 @@
 
 
 <?php 
-$db = "spieldatenbank_dev";
-$link=mysql_connect("localhost", "root","root");
 
-
-@ mysql_select_db($db) or die("Could not connect to the desired database."); 
+require_once $_SERVER['DOCUMENT_ROOT']."/scw_db_connect.php";
 
 $result = mysql_query("SELECT NAME, S_12_13  FROM TORSCHUETZEN_HERREN order by S_12_13 desc, NAME") or die('Es ist ein Fehler aufgetreten: '.mysql_error());
 

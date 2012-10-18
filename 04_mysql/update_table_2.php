@@ -11,13 +11,7 @@ $tabelle = $_POST[tabelle];
 $attribut = $_POST[attribut];
 
 
-$db = "spieldatenbank_dev"; 
-
-#$verbindung = mysql_connect("localhost", "pascal","admin");mysql_select_db("SCW");
-$link=mysql_connect("localhost", "root","root");
-
-#$link = mysql_connect(localhost,$username,$password); 
-@ mysql_select_db($db) or die("Could not connect to the desired database."); 
+require_once $_SERVER['DOCUMENT_ROOT']."/scw_db_connect.php";
      
 $query = "SELECT begegnung FROM $tabelle where saison = '2012/2013' order by spieldatum";
 

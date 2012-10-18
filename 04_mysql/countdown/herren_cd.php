@@ -1,8 +1,7 @@
 <html>
 
 <?php
-mysql_connect("localhost", "root","root");
-mysql_select_db("spieldatenbank_dev");
+require_once $_SERVER['DOCUMENT_ROOT']."/scw_db_connect.php";
 $ergebnis_h = mysql_query("select BEGEGNUNG,DATE_FORMAT(spieldatum,'%e.%c.%Y - %H:%i') DATUM,DATE_FORMAT(spieldatum,'%a %b %d %Y %H:%i:%s GMT+0200') SPIELDATUM,BILD,SPIELORT,resultat,BEMERKUNG,
 datediff(spieldatum,sysdate()) TAGDIFF,hour(timediff(spieldatum,sysdate()))*60+MINUTE(timediff(spieldatum,sysdate())) mindiff  from SPIELPLAN_HERREN 
 where datediff(spieldatum,sysdate()) = (select min(datediff(a.spieldatum,sysdate()))datedifferenz from SPIELPLAN_HERREN a where datediff(a.spieldatum,sysdate())>=0)");

@@ -8,13 +8,7 @@
 <h2>Update Spielplan für Countdown (3/3)</h2>
 <?PHP
 
-$db = "spieldatenbank_dev"; 
-
-#$verbindung = mysql_connect("localhost", "pascal","admin");mysql_select_db("SCW");
-$link=mysql_connect("localhost", "root","root");
-
-#$link = mysql_connect(localhost,$username,$password); 
-@ mysql_select_db($db) or die("Could not connect to the desired database."); 
+require_once $_SERVER['DOCUMENT_ROOT']."/scw_db_connect.php";
 
 $wert = $_POST[eingabewert];
 $table = $_POST[table];

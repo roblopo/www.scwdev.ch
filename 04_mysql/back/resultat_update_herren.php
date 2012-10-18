@@ -90,14 +90,7 @@ else {
 /*echo "</table>";*/
 echo "Folgende Statements werden ausgeführt <br>";
 
-
-$con = mysql_connect("localhost", "root","root");
-if (!$con)
-  {
-  die('Could not connect: ' . mysql_error());
-  }
-
-mysql_select_db("spieldatenbank_dev", $con);
+require_once $_SERVER['DOCUMENT_ROOT']."/scw_db_connect.php";
 
 
 

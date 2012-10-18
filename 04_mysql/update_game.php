@@ -12,13 +12,8 @@ $bild = $_POST[bild];
 $resultat = $_POST[resultat];
 $artikel = $_POST[artikel];
 
+require_once $_SERVER['DOCUMENT_ROOT']."/scw_db_connect.php";
 
-$db = "spieldatenbank_dev"; 
-
-$link=mysql_connect("localhost", "root","root");
-
-@ mysql_select_db($db) or die("Could not connect to the desired database."); 
-mysql_set_charset('UTF8',$link);
      
 $query = "UPDATE $table SET BEGEGNUNG = '$begegnung',SPIELORT = '$spielort',SPIELDATUM = '$spieldatum',BEMERKUNG = '$bemerkung',BILD = '$bild',RESULTAT = '$resultat',ARTIKEL = '$artikel' where saison = '2012/2013' and ID = $id";
 

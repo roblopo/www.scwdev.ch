@@ -8,14 +8,7 @@
 <?php 
 
 $q=$_GET["q"];
-
-$db = "spieldatenbank_dev"; 
-
-$link=mysql_connect("localhost", "root","root");
-
-
-@ mysql_select_db($db) or die("Could not connect to the desired database."); 
-mysql_set_charset('UTF8',$link);
+require_once $_SERVER['DOCUMENT_ROOT']."/scw_db_connect.php";
      
 
 

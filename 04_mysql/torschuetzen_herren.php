@@ -12,14 +12,7 @@ elseif ($q == "2011/2012") {
 	}
 	
 
-	
-
-$db = "spieldatenbank_dev"; 
-
-$link=mysql_connect("localhost", "root","root");
-
-
-@ mysql_select_db($db) or die("Could not connect to the desired database."); 
+require_once $_SERVER['DOCUMENT_ROOT']."/scw_db_connect.php";
 mysql_set_charset('UTF8',$link);
      
 

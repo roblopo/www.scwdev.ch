@@ -12,12 +12,7 @@
 
 <?php 
 
-$db = "spieldatenbank_dev"; 
-
-$link=mysql_connect("localhost", "root","root");
-
-
-@ mysql_select_db($db) or die("Could not connect to the desired database."); 
+require_once $_SERVER['DOCUMENT_ROOT']."/scw_db_connect.php";
 
     
 

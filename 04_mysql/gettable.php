@@ -2,10 +2,7 @@
 
 $tabelle=$_GET["q1"];
 
-
-$db = "spieldatenbank_dev"; 
-
-$link=mysql_connect("localhost", "root","root");
+require_once $_SERVER['DOCUMENT_ROOT']."/scw_db_connect.php";
 
 @ mysql_select_db($db) or die("Could not connect to the desired database."); 
 

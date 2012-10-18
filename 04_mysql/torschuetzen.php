@@ -13,15 +13,7 @@ elseif ($q == "2011/2012") {
 	
 $a = "S_11_12";
 	
-
-$db = "spieldatenbank_dev"; 
-
-$link=mysql_connect("localhost", "root","root");
-
-
-@ mysql_select_db($db) or die("Could not connect to the desired database."); 
-mysql_set_charset('UTF8',$link);
-     
+require_once $_SERVER['DOCUMENT_ROOT']."/scw_db_connect.php";
 
 
 $result = mysql_query("SELECT NAME,$a  FROM TORSCHUETZEN_HERREN WHERE $a > 0 order by $a desc") or die('Es ist ein Fehler aufgetreten: '.mysql_error());
