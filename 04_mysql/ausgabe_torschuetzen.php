@@ -13,7 +13,7 @@
 <?php 
 
 require_once $_SERVER['DOCUMENT_ROOT']."/scw_db_connect.php";
-// hallo
+// hallo robin
 $result = mysql_query("SELECT NAME, S_12_13  FROM TORSCHUETZEN_HERREN order by S_12_13 desc, NAME") or die('Es ist ein Fehler aufgetreten: '.mysql_error());
 
 $neuername = $_POST[neuername];
